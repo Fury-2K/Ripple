@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
 
 public extension Color {
@@ -14,17 +13,6 @@ public extension Color {
     static let primeblue = Color(hex: 0x3D439C)
     static let graysome = Color(hex: 0xD1D6E4)
 }
-//
-//public extension UIColor {
-//
-//    static let background = UIColor(named: "background")
-//    static let primary = UIColor(named: "primary")
-//    static let secondary = UIColor(named: "secondary")
-//
-//    func swColor() -> Color {
-//        Color(self)
-//    }
-//}
 
 extension Color {
     init(hex: UInt, alpha: Double = 1) {
