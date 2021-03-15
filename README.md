@@ -18,6 +18,9 @@ This package contains UI components with a custom feel to it.
 - SwiftUI
 - Swift
 
+
+![Screenshot](Screenshot 2021-03-12 at 6.41.40 PM.png)
+
 **The project is built supporting iOS 13 and above**
 
 ## How to use ?
