@@ -66,7 +66,7 @@ struct RippleButton_Previews: PreviewProvider {
                 .frame(width: .infinity, height: .infinity, alignment: .center)
                 .edgesIgnoringSafeArea(.all)
             Button(action: { }) {
-                Text("This is ripple bitch")
+                Text("This is ripple button")
                     .frame(width: 200, height: 15, alignment: .center)
             }
             .buttonStyle(RippleButtonStyle(with: .primeblue))
