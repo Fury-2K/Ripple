@@ -14,15 +14,18 @@ struct RippleButtonStyle: ButtonStyle {
     var color: Color
     var lightColor: Color
     var shadowColor: Color
+    var isInternalGradientPresent: Bool
     
     // MARK: Initialization
     
     init(with color: Color,
          lightColor: Color = .white,
-         shadowColor: Color = .black) {
+         shadowColor: Color = .black,
+         isInternalGradientPresent: Bool = true) {
         self.color = color
         self.lightColor = lightColor
         self.shadowColor = shadowColor
+        self.isInternalGradientPresent = isInternalGradientPresent
     }
     
     // MARK: Where magic happens
@@ -35,20 +38,22 @@ struct RippleButtonStyle: ButtonStyle {
             .background(
                 ZStack {
                     color
-                    // background color
-                    RoundedRectangle(cornerRadius: 30, style: .circular)
-                        .foregroundColor(color)
-                        .blur(radius: 1)
-                        .offset(x: -1, y: -1)
-                    
-                    // inner gradient shadow
-                    RoundedRectangle(cornerRadius: 30, style: .circular)
-                        .fill(
-                            LinearGradient(gradient: Gradient(colors: [shadowColor.opacity(0.15), color.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottom)
-                        )
-                        .padding(3.5)
-//                        .offset(x: 0.5, y: 1)
-                        .blur(radius: 1)
+                    if isInternalGradientPresent {
+                        // background color
+                        RoundedRectangle(cornerRadius: 30, style: .circular)
+                            .foregroundColor(color)
+                            .blur(radius: 1)
+                            .offset(x: -1, y: -1)
+                        
+                        // inner gradient shadow
+                        RoundedRectangle(cornerRadius: 30, style: .circular)
+                            .fill(
+                                LinearGradient(gradient: Gradient(colors: [shadowColor.opacity(0.15), color.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottom)
+                            )
+                            .padding(3.5)
+                            //                        .offset(x: 0.5, y: 1)
+                            .blur(radius: 1)
+                    }
                 }
             )
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
@@ -62,14 +67,16 @@ struct RippleButtonStyle: ButtonStyle {
 struct RippleButton_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.background
+            Color(hex: 0xa9c0a6)
                 .frame(width: .infinity, height: .infinity, alignment: .center)
                 .edgesIgnoringSafeArea(.all)
             Button(action: { }) {
-                Text("This is ripple bitch")
+                Text("This is ripple button")
+                    .foregroundColor(Color(hex: 0x097770))
                     .frame(width: 200, height: 15, alignment: .center)
+                    
             }
-            .buttonStyle(RippleButtonStyle(with: .primeblue))
+            .buttonStyle(RippleButtonStyle(with: Color(hex: 0xe0cdbe), lightColor: Color(hex: 0xa9c0a6), shadowColor: Color(hex: 0x097770)))
         }
     }
 }
