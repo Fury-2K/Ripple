@@ -36,12 +36,15 @@ This has multiple properties to use.
 var color: Color
 var lightColor: Color
 var shadowColor: Color
+var isInternalGradientPresent: Bool
 ```
 - **Color**- This is a mandatory parameter. This is the color for the button.
 
 - **lightColor**- is the color of light source. *Default value = Color.white*
 
 - **shadowColor**- as the name suggests is the shadow color. *Default value = Color.black*
+
+- **isInternalGradientPresent**- This is a boolean flag which toggles the internal color gradient for inner shadows.
 
 ## Having trouble ?
 * If you are having trouble with this project or if you find any bugs, do open a new issue and describe the problem.

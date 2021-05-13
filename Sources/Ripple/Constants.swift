@@ -11,7 +11,7 @@ import SwiftUI
 public extension Color {
     static let background = Color(hex: 0x202426)
     static let primeblue = Color(hex: 0x3D439C)
-    static let graysome = Color(hex: 0xD1D6E4)
+//    static let graysome = Color(hex: 0xD1D6E4)
 }
 
 extension Color {
