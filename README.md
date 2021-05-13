@@ -2,7 +2,7 @@
 Animation, Effects & Transitions for iOS projects.
 
 
-[![platform](https://img.shields.io/badge/platform-iOS-orange)](https://www.android.com)
+![platform](https://img.shields.io/badge/platform-iOS-orange)
 [![GitHub license](https://img.shields.io/badge/License-Apache2.0-blue.svg)](LICENSE)
 ![Repository size](https://img.shields.io/github/repo-size/Fury-2K/Ripple)
 ![GitHub stars](https://img.shields.io/github/stars/Fury-2K/Ripple?style=social)
