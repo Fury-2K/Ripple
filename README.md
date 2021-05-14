@@ -18,19 +18,22 @@ This package contains UI components with a custom feel to it.
 - SwiftUI
 - Swift
 
+
+![Screenshot](Screenshot 2021-03-12 at 6.41.40 PM.png)
+
 **The project is built supporting iOS 13 and above**
 
 ## How to use ?
 ```swift
 Button(action: { }) {
-    Text("This is ripple bitch")
+    Text("This is ripple button")
         .frame(width: 200, height: 15, alignment: .center)
 }
 .buttonStyle(RippleButtonStyle(with: .primeblue))
 ```
 or simply create a button and add this as one of its modifiers - 
 `.buttonStyle(RippleButtonStyle(with: <insert Color>))`
-
+<img align="right" src="/Resources/button_1.png" width="250">
 This has multiple properties to use.
 ```swift
 var color: Color
