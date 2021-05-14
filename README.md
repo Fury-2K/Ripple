@@ -26,14 +26,14 @@ This package contains UI components with a custom feel to it.
 ## How to use ?
 ```
 Button(action: { }) {
-    Text("This is ripple bitch")
+    Text("This is ripple button")
         .frame(width: 200, height: 15, alignment: .center)
 }
 .buttonStyle(RippleButtonStyle(with: .primeblue))
 ```
 or simply create a button and add this as one of its modifiers - 
 `.buttonStyle(RippleButtonStyle(with: <insert Color>))`
-
+<img align="right" src="/Resources/button_1.png" width="250">
 This has multiple properties to use.
 ```
 var color: Color
