@@ -24,6 +24,9 @@ This package contains UI components with a custom feel to it.
 **The project is built supporting iOS 13 and above**
 
 ## How to use ?
+
+<img align="center" src="/Resources/button_1.png" width="500"><br><br>
+
 ```swift
 Button(action: { }) {
     Text("This is ripple button")
@@ -31,9 +34,9 @@ Button(action: { }) {
 }
 .buttonStyle(RippleButtonStyle(with: .primeblue))
 ```
+
 or simply create a button and add this as one of its modifiers - 
 `.buttonStyle(RippleButtonStyle(with: <insert Color>))`
-<img align="right" src="/Resources/button_1.png" width="250">
 This has multiple properties to use.
 ```swift
 var color: Color
